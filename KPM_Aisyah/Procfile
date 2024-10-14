@@ -1,0 +1,1 @@
+web : gunicorn KPM_Aisyah.wsgi --log-file-

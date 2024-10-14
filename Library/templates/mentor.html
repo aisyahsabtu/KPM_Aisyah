@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New mentor</title>
+</head>
+<body>
+    <h1>KOLEJ PROFESSIONAL MARA INDERA MAHKOTA</h1>
+    <h2>MENTOR</h2>
+    <form action=""method = "post">
+    {%csrf_token%}
+    Mentor ID <input type="text" name="menid"><br><br>
+    Mentor Name <input type="text" name="menname"><br><br>
+    Room Number<input type="text" name="menroomno" value="sk2"><br><br>
+    <input type="submit" value="SAVE"><br><br>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Mentor ID</th>
+                <th>Mentor Name</th>
+                <th>Room Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mentor in mentors %}
+            <tr>
+                <td>{{mentor.menid}}</td>
+                <td>{{mentor.menname}}</td>
+                <td>{{mentor.menroomno}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

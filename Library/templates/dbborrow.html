@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORROW</title>
+</head>
+<body>
+    <h1>Borrowing Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Borrow ID</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+                <th>Book ID</th>
+                <th>Student ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in borrowing %}
+            <tr>
+                <td>{{x.borrow_id}}</td>
+                <td>{{x.borrow_date}}</td>
+                <td>{{x.return_date}}</td>
+                <td>{{x.book_id_id}}</td>
+                <td>{{x.student_id_id}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

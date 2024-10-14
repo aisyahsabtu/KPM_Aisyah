@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KOLEJ PROFESSIONAL MARA INDERA MAHKOTA</h1>
+    <h2>COURSE</h2>
+    <form action="save_update_course/{{x.code}}"method = "post">
+    {%csrf_token%}
+    Course Code <input type="text" name="code" name = "code" value ='{{x.code}}'disabled='false'><br><br>
+    Description <input type="text" name="description" value="{{x.description}}"><br><br>
+    <input type="submit" value="SAVE"><br><br>
+    </form>
+
+</body>
+</html>
